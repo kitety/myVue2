@@ -8,12 +8,17 @@
     <script src="../dist/vue.js"></script>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app" class="con"></div>
     <script>
+        // render 和template 都可以
       new Vue({
         el: "#app",
+        template: "<div>{{msg}}</div>",
+        // render(h) {
+        //   return h("div", this.msg);
+        // },
         data: {
-          message: "Hello Vue!",
+          msg: "Hello Vue!",
         },
       });
     </script>
