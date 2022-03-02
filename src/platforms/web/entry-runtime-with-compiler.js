@@ -1,1 +1,3 @@
-console.log('entry runtime with compiler');
+import Vue from "./runtime/index";
+
+export default Vue;
