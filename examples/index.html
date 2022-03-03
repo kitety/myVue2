@@ -10,12 +10,12 @@
   <body>
     <div id="app" class="con"></div>
     <script>
-        // render 和template 都可以
+      // render 和template 都可以
       new Vue({
         el: "#app",
         // template: "<div>{{msg}}</div>",
-        render(h) {
-          return h("div", this.msg);
+        render(createElement) {
+          return createElement("p", {}, this.msg);
         },
         data: {
           msg: "Hello Vue!",
