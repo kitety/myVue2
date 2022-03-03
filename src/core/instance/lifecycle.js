@@ -11,14 +11,10 @@ export function lifecycleMixin(Vue) {
 export function mountComponent(vm, el, hydrating) {
   console.log("el: ", el, vm);
   vm.$el = el;
-  vm._render = () => {
-    console.log("_render");
-    // 得到一个东西
-    return "aaa";
-  };
 
   let updateComponent;
 
+  console.log("vm._render(): ", vm._render());
   //   render 可以得到虚拟dom，再调用update方法
   updateComponent = () => {
     vm._update(vm._render(), hydrating);

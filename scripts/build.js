@@ -2,7 +2,7 @@ const rollup = require("rollup");
 const fs = require("fs");
 
 let builds = require("./config").getAllBuilds();
-console.log("builds: ", builds);
+// console.log("builds: ", builds);
 
 build(builds);
 function build(builds) {
@@ -22,7 +22,7 @@ function build(builds) {
 }
 
 function buildEntry(config) {
-  console.log("config: ", config);
+  // console.log("config: ", config);
   const output = config.output;
   const { file, format } = output;
   return rollup

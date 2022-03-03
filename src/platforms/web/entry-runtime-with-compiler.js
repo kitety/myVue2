@@ -26,7 +26,8 @@ Vue.prototype.$mount = function (el, hydrating) {
     }
     if (template) {
       let render = () => {
-        console.log("gsd render");
+        // console.log("gsd render");
+        return 'gsd render'
       };
       options.render = render;
       console.log("options: ", options);
