@@ -13,10 +13,10 @@
         // render 和template 都可以
       new Vue({
         el: "#app",
-        template: "<div>{{msg}}</div>",
-        // render(h) {
-        //   return h("div", this.msg);
-        // },
+        // template: "<div>{{msg}}</div>",
+        render(h) {
+          return h("div", this.msg);
+        },
         data: {
           msg: "Hello Vue!",
         },

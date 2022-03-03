@@ -1,3 +1,6 @@
+import { initRender } from "./render";
+import { initProxy } from "./proxy";
+
 export function initMixin(Vue) {
   Vue.prototype._init = function (options) {
     const vm = this;
@@ -10,6 +13,11 @@ export function initMixin(Vue) {
       // options挂载在vm属性上
       vm.$options = options;
     }
+
+    // init render
+    // 初始化render
+    initProxy(vm);
+    initRender(vm);
 
     // 挂载
     if (vm.$options.el) {
