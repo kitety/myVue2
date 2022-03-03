@@ -3,6 +3,7 @@ import { query } from "./util/index";
 
 const mount = Vue.prototype.$mount;
 // 重写$mount
+// 处理 render template
 Vue.prototype.$mount = function (el, hydrating) {
   el = el && query(el);
   const options = this.$options;
